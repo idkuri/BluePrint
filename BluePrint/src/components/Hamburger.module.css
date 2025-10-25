@@ -1,0 +1,981 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.isActive:hover {
+  opacity: 0.7;
+}
+
+.hamburger.isActive .hamburgerInner,
+.hamburger.isActive .hamburgerInner::before,
+.hamburger.isActive .hamburgerInner::after {
+  background-color: #000;
+}
+
+.hamburgerBox {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburgerInner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburgerInner,
+.hamburgerInner::before,
+.hamburgerInner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburgerInner::before,
+.hamburgerInner::after {
+  content: "";
+  display: block;
+}
+
+.hamburgerInner::before {
+  top: -10px;
+}
+
+.hamburgerInner::after {
+  bottom: -10px;
+}
+
+/* 3DX */
+.hamburger3dx .hamburgerBox {
+  perspective: 80px;
+}
+
+.hamburger3dx .hamburgerInner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dx .hamburgerInner::before,
+.hamburger3dx .hamburgerInner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dx.isActive .hamburgerInner {
+  background-color: transparent !important;
+  transform: rotateY(180deg);
+}
+
+.hamburger3dx.isActive .hamburgerInner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger3dx.isActive .hamburgerInner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* 3DX Reverse */
+.hamburger3dxR .hamburgerBox {
+  perspective: 80px;
+}
+
+.hamburger3dxR .hamburgerInner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dxR .hamburgerInner::before,
+.hamburger3dxR .hamburgerInner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dxR.isActive .hamburgerInner {
+  background-color: transparent !important;
+  transform: rotateY(-180deg);
+}
+
+.hamburger3dxR.isActive .hamburgerInner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger3dxR.isActive .hamburgerInner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* 3DY */
+.hamburger3dy .hamburgerBox {
+  perspective: 80px;
+}
+
+.hamburger3dy .hamburgerInner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dy .hamburgerInner::before,
+.hamburger3dy .hamburgerInner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dy.isActive .hamburgerInner {
+  background-color: transparent !important;
+  transform: rotateX(-180deg);
+}
+
+.hamburger3dy.isActive .hamburgerInner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger3dy.isActive .hamburgerInner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* 3DY Reverse */
+.hamburger3dyR .hamburgerBox {
+  perspective: 80px;
+}
+
+.hamburger3dyR .hamburgerInner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dyR .hamburgerInner::before,
+.hamburger3dyR .hamburgerInner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dyR.isActive .hamburgerInner {
+  background-color: transparent !important;
+  transform: rotateX(180deg);
+}
+
+.hamburger3dyR.isActive .hamburgerInner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger3dyR.isActive .hamburgerInner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* 3DXY */
+.hamburger3dxy .hamburgerBox {
+  perspective: 80px;
+}
+
+.hamburger3dxy .hamburgerInner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dxy .hamburgerInner::before,
+.hamburger3dxy .hamburgerInner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dxy.isActive .hamburgerInner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg);
+}
+
+.hamburger3dxy.isActive .hamburgerInner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger3dxy.isActive .hamburgerInner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* 3DXY Reverse */
+.hamburger3dxyR .hamburgerBox {
+  perspective: 80px;
+}
+
+.hamburger3dxyR .hamburgerInner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dxyR .hamburgerInner::before,
+.hamburger3dxyR .hamburgerInner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger3dxyR.isActive .hamburgerInner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
+}
+
+.hamburger3dxyR.isActive .hamburgerInner::before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger3dxyR.isActive .hamburgerInner::after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+
+/* Arrow */
+.hamburgerArrow.isActive .hamburgerInner::before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+.hamburgerArrow.isActive .hamburgerInner::after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+/* Arrow Right */
+.hamburgerArrowR.isActive .hamburgerInner::before {
+  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+.hamburgerArrowR.isActive .hamburgerInner::after {
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+/* Arrow Alt */
+.hamburgerArrowalt .hamburgerInner::before {
+  transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburgerArrowalt .hamburgerInner::after {
+  transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburgerArrowalt.isActive .hamburgerInner::before {
+  top: 0;
+  transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);
+  transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.hamburgerArrowalt.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+/* Arrow Alt Right */
+.hamburgerArrowaltR .hamburgerInner::before {
+  transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburgerArrowaltR .hamburgerInner::after {
+  transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburgerArrowaltR.isActive .hamburgerInner::before {
+  top: 0;
+  transform: translate3d(8px, -10px, 0) rotate(45deg) scale(0.7, 1);
+  transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.hamburgerArrowaltR.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: translate3d(8px, 10px, 0) rotate(-45deg) scale(0.7, 1);
+  transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+/* Arrow Turn */
+.hamburgerArrowturn.isActive .hamburgerInner {
+  transform: rotate(-180deg);
+}
+
+.hamburgerArrowturn.isActive .hamburgerInner::before {
+  transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+.hamburgerArrowturn.isActive .hamburgerInner::after {
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+/* Arrow Turn Right */
+.hamburgerArrowturnR.isActive .hamburgerInner {
+  transform: rotate(-180deg);
+}
+
+.hamburgerArrowturnR.isActive .hamburgerInner::before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1);
+}
+
+.hamburgerArrowturnR.isActive .hamburgerInner::after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1);
+}
+
+/* Boring */
+.hamburgerBoring .hamburgerInner,
+.hamburgerBoring .hamburgerInner::before,
+.hamburgerBoring .hamburgerInner::after {
+  transition-property: none;
+}
+
+.hamburgerBoring.isActive .hamburgerInner {
+  transform: rotate(45deg);
+}
+
+.hamburgerBoring.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+}
+
+.hamburgerBoring.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+
+/* Collapse */
+.hamburgerCollapse .hamburgerInner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerCollapse .hamburgerInner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburgerCollapse .hamburgerInner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerCollapse.isActive .hamburgerInner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerCollapse.isActive .hamburgerInner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+.hamburgerCollapse.isActive .hamburgerInner::before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Collapse Reverse */
+.hamburgerCollapseR .hamburgerInner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerCollapseR .hamburgerInner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburgerCollapseR .hamburgerInner::before {
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerCollapseR.isActive .hamburgerInner {
+  transform: translate3d(0, -10px, 0) rotate(45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerCollapseR.isActive .hamburgerInner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+.hamburgerCollapseR.isActive .hamburgerInner::before {
+  top: 0;
+  transform: rotate(90deg);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Elastic */
+.hamburgerElastic .hamburgerInner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburgerElastic .hamburgerInner::before {
+  top: 10px;
+  transition: opacity 0.125s 0.275s ease;
+}
+
+.hamburgerElastic .hamburgerInner::after {
+  top: 20px;
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburgerElastic.isActive .hamburgerInner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 0.075s;
+}
+
+.hamburgerElastic.isActive .hamburgerInner::before {
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+.hamburgerElastic.isActive .hamburgerInner::after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+  transition-delay: 0.075s;
+}
+
+/* Elastic Reverse */
+.hamburgerElasticR .hamburgerInner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburgerElasticR .hamburgerInner::before {
+  top: 10px;
+  transition: opacity 0.125s 0.275s ease;
+}
+
+.hamburgerElasticR .hamburgerInner::after {
+  top: 20px;
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburgerElasticR.isActive .hamburgerInner {
+  transform: translate3d(0, 10px, 0) rotate(-135deg);
+  transition-delay: 0.075s;
+}
+
+.hamburgerElasticR.isActive .hamburgerInner::before {
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+.hamburgerElasticR.isActive .hamburgerInner::after {
+  transform: translate3d(0, -20px, 0) rotate(270deg);
+  transition-delay: 0.075s;
+}
+
+/* Emphatic */
+.hamburgerEmphatic {
+  overflow: hidden;
+}
+
+.hamburgerEmphatic .hamburgerInner {
+  transition: background-color 0.125s 0.175s ease-in;
+}
+
+.hamburgerEmphatic .hamburgerInner::before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear,
+    left 0.125s 0.175s ease-in;
+}
+
+.hamburgerEmphatic .hamburgerInner::after {
+  top: 10px;
+  right: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear,
+    right 0.125s 0.175s ease-in;
+}
+
+.hamburgerEmphatic.isActive .hamburgerInner {
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  background-color: transparent !important;
+}
+
+.hamburgerEmphatic.isActive .hamburgerInner::before {
+  left: -80px;
+  top: -80px;
+  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburgerEmphatic.isActive .hamburgerInner::after {
+  right: -80px;
+  top: -80px;
+  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Emphatic Reverse */
+.hamburgerEmphaticR {
+  overflow: hidden;
+}
+
+.hamburgerEmphaticR .hamburgerInner {
+  transition: background-color 0.125s 0.175s ease-in;
+}
+
+.hamburgerEmphaticR .hamburgerInner::before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear,
+    left 0.125s 0.175s ease-in;
+}
+
+.hamburgerEmphaticR .hamburgerInner::after {
+  top: 10px;
+  right: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear,
+    right 0.125s 0.175s ease-in;
+}
+
+.hamburgerEmphaticR.isActive .hamburgerInner {
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  background-color: transparent !important;
+}
+
+.hamburgerEmphaticR.isActive .hamburgerInner::before {
+  left: -80px;
+  top: 80px;
+  transform: translate3d(80px, -80px, 0) rotate(-45deg);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburgerEmphaticR.isActive .hamburgerInner::after {
+  right: -80px;
+  top: 80px;
+  transform: translate3d(-80px, -80px, 0) rotate(45deg);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Minus */
+.hamburgerMinus .hamburgerInner::before,
+.hamburgerMinus .hamburgerInner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+}
+
+.hamburgerMinus.isActive .hamburgerInner::before,
+.hamburgerMinus.isActive .hamburgerInner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+}
+
+.hamburgerMinus.isActive .hamburgerInner::before {
+  top: 0;
+}
+
+.hamburgerMinus.isActive .hamburgerInner::after {
+  bottom: 0;
+}
+
+/* Slider */
+.hamburgerSlider .hamburgerInner {
+  top: 2px;
+}
+
+.hamburgerSlider .hamburgerInner::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+
+.hamburgerSlider .hamburgerInner::after {
+  top: 20px;
+}
+
+.hamburgerSlider.isActive .hamburgerInner {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburgerSlider.isActive .hamburgerInner::before {
+  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+
+.hamburgerSlider.isActive .hamburgerInner::after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+/* Slider Reverse */
+.hamburgerSliderR .hamburgerInner {
+  top: 2px;
+}
+
+.hamburgerSliderR .hamburgerInner::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+
+.hamburgerSliderR .hamburgerInner::after {
+  top: 20px;
+}
+
+.hamburgerSliderR.isActive .hamburgerInner {
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+
+.hamburgerSliderR.isActive .hamburgerInner::before {
+  transform: rotate(45deg) translate3d(5.71429px, -6px, 0);
+  opacity: 0;
+}
+
+.hamburgerSliderR.isActive .hamburgerInner::after {
+  transform: translate3d(0, -20px, 0) rotate(90deg);
+}
+
+/* Spin */
+.hamburgerSpin .hamburgerInner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpin .hamburgerInner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburgerSpin .hamburgerInner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpin.isActive .hamburgerInner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerSpin.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburgerSpin.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Spin Reverse */
+.hamburgerSpinR .hamburgerInner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpinR .hamburgerInner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburgerSpinR .hamburgerInner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpinR.isActive .hamburgerInner {
+  transform: rotate(-225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerSpinR.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburgerSpinR.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Spring */
+.hamburgerSpring .hamburgerInner {
+  top: 2px;
+  transition: background-color 0s 0.13s linear;
+}
+
+.hamburgerSpring .hamburgerInner::before {
+  top: 10px;
+  transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpring .hamburgerInner::after {
+  top: 20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpring.isActive .hamburgerInner {
+  transition-delay: 0.22s;
+  background-color: transparent !important;
+}
+
+.hamburgerSpring.isActive .hamburgerInner::before {
+  top: 0;
+  transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburgerSpring.isActive .hamburgerInner::after {
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+
+/* Spring Reverse */
+.hamburgerSpringR .hamburgerInner {
+  top: auto;
+  bottom: 0;
+  transition-duration: 0.13s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpringR .hamburgerInner::after {
+  top: -20px;
+  transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0s linear;
+}
+
+.hamburgerSpringR .hamburgerInner::before {
+  transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSpringR.isActive .hamburgerInner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerSpringR.isActive .hamburgerInner::after {
+  top: 0;
+  opacity: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0s 0.22s linear;
+}
+
+.hamburgerSpringR.isActive .hamburgerInner::before {
+  top: 0;
+  transform: rotate(90deg);
+  transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Stand */
+.hamburgerStand .hamburgerInner {
+  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    background-color 0s 0.075s linear;
+}
+
+.hamburgerStand .hamburgerInner::before {
+  transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerStand .hamburgerInner::after {
+  transition: bottom 0.075s 0.075s ease-in,
+    transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerStand.isActive .hamburgerInner {
+  transform: rotate(90deg);
+  background-color: transparent !important;
+  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+    background-color 0s 0.15s linear;
+}
+
+.hamburgerStand.isActive .hamburgerInner::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerStand.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: bottom 0.075s 0.1s ease-out,
+    transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Stand Reverse */
+.hamburgerStandR .hamburgerInner {
+  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    background-color 0s 0.075s linear;
+}
+
+.hamburgerStandR .hamburgerInner::before {
+  transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerStandR .hamburgerInner::after {
+  transition: bottom 0.075s 0.075s ease-in,
+    transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerStandR.isActive .hamburgerInner {
+  transform: rotate(-90deg);
+  background-color: transparent !important;
+  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+    background-color 0s 0.15s linear;
+}
+
+.hamburgerStandR.isActive .hamburgerInner::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerStandR.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: bottom 0.075s 0.1s ease-out,
+    transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Squeeze */
+.hamburgerSqueeze .hamburgerInner {
+  transition-duration: 0.075s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSqueeze .hamburgerInner::before {
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+.hamburgerSqueeze .hamburgerInner::after {
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburgerSqueeze.isActive .hamburgerInner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburgerSqueeze.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+.hamburgerSqueeze.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Vortex */
+.hamburgerVortex .hamburgerInner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hamburgerVortex .hamburgerInner::before,
+.hamburgerVortex .hamburgerInner::after {
+  transition-duration: 0s;
+  transition-delay: 0.1s;
+  transition-timing-function: linear;
+}
+
+.hamburgerVortex .hamburgerInner::before {
+  transition-property: top, opacity;
+}
+
+.hamburgerVortex .hamburgerInner::after {
+  transition-property: bottom, transform;
+}
+
+.hamburgerVortex.isActive .hamburgerInner {
+  transform: rotate(765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hamburgerVortex.isActive .hamburgerInner::before,
+.hamburgerVortex.isActive .hamburgerInner::after {
+  transition-delay: 0s;
+}
+
+.hamburgerVortex.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+}
+
+.hamburgerVortex.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(90deg);
+}
+
+/* Vortex Reverse */
+.hamburgerVortexR .hamburgerInner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hamburgerVortexR .hamburgerInner::before,
+.hamburgerVortexR .hamburgerInner::after {
+  transition-duration: 0s;
+  transition-delay: 0.1s;
+  transition-timing-function: linear;
+}
+
+.hamburgerVortexR .hamburgerInner::before {
+  transition-property: top, opacity;
+}
+
+.hamburgerVortexR .hamburgerInner::after {
+  transition-property: bottom, transform;
+}
+
+.hamburgerVortexR.isActive .hamburgerInner {
+  transform: rotate(-765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hamburgerVortexR.isActive .hamburgerInner::before,
+.hamburgerVortexR.isActive .hamburgerInner::after {
+  transition-delay: 0s;
+}
+
+.hamburgerVortexR.isActive .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+}
+
+.hamburgerVortexR.isActive .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./BluePrint-Backend
+    container_name: backend
+    env_file:
+      - ./BluePrint-Backend/.env
+    ports:
+      - "5050:5050"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - app-network
+
+  frontend:
+    build: ./BluePrint
+    container_name: frontend
+    env_file:
+      - ./BluePrint/.env
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

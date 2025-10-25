@@ -1,0 +1,79 @@
+[
+  {
+    "title": "The BluePrint Series: A Fireside Chat with Rich Tu",
+    "picture": "/event_pictures/event.png",
+    "date": "2025-05-14",
+    "introduction": "Join us for an exclusive evening with Rich Tu, the award-winning designer behind the official NY/NJ 2026 FIFA World Cup poster, and a creative powerhouse known for his work with Nike, MTV, and culture-shaping campaigns across the globe.",
+    "location": "Soho House, New York",
+    "description": "Presented as part of The Gradient's Blueprint Series, this fireside chat—moderated by Love Malone, CEO of The Gradient—will dive into Rich's creative journey, his thoughts on where the industry is headed, and how design continues to shape identity, storytelling, and the future of culture.",
+    "agenda": [
+      {
+        "time": "10:30 AM - 11:00 AM",
+        "title": "WELCOME AND OPENING",
+        "description": "Join us for an exclusive evening with Rich Tu, the award-winning designer behind the official NY/NJ 2026 FIFA",
+        "location": "Ground Floor"
+      },
+      {
+        "time": "11:00 AM - 12:00 PM",
+        "title": "FIRESIDE CHAT",
+        "description": "Rich Tu shares his creative journey and insights into the design world.",
+        "location": "Main Hall"
+      }
+    ],
+    "speakers": [
+      { "name": "Rich Tu", "title": "Artist", "picture": "/speaker_pictures/RichTu.png" },
+      { "name": "Love Malone", "title": "Founder CEO", "picture": "/speaker_pictures/LoveMalone.png" },
+      { "name": "Milan Chaney", "title": "MC", "picture": "/speaker_pictures/MilanChaney.png" }
+    ],
+    "faq": [
+      { "question": "What is the schedule for the event?", "answer": "You can view the full event schedule, including keynote speakers, workshops, and panel discussions, on the event page under the \"agenda\" section." },
+      { "question": "What is the dress code?", "answer": "Smart casual is recommended." },
+      { "question": "Are tickets refundable?", "answer": "Tickets are non-refundable but transferable." },
+      { "question": "Is there parking available?", "answer": "Limited parking is available on-site, public transport is recommended." }
+    ]
+  },
+  {
+    "title": "Creative Minds: A Conversation with Sofia Martinez",
+    "picture": "/event_pictures/event.png",
+    "date": "2025-06-21",
+    "introduction": "Sofia Martinez, award-winning illustrator and animator, discusses her approach to storytelling through art and the impact of visual culture on society.",
+    "location": "The Glasshouse, New York",
+    "description": "Part of the Creative Minds Series, this session will explore Sofia's artistic process, her work with global brands, and how to push creative boundaries in design and animation.",
+    "agenda": [
+      { "time": "5:00 PM - 5:30 PM", "title": "Check-in & Welcome Drinks", "description": "Meet and greet with fellow creatives.", "location": "Lobby" },
+      { "time": "5:30 PM - 6:30 PM", "title": "Talk with Sofia Martinez", "description": "In-depth discussion of her creative journey.", "location": "Main Hall" },
+      { "time": "6:30 PM - 7:00 PM", "title": "Q&A Session", "description": "Audience questions answered by Sofia.", "location": "Main Hall" }
+    ],
+    "speakers": [
+      { "name": "Sofia Martinez", "title": "Illustrator & Animator", "picture": "/speaker_pictures/SofiaMartinez.png" },
+      { "name": "Alex Kim", "title": "Creative Director", "picture": "/speaker_pictures/AlexKim.png" }
+    ],
+    "faq": [
+      { "question": "Is there a cost to attend?", "answer": "Tickets are $25 for general admission and $50 for VIP." },
+      { "question": "Can I bring guests?", "answer": "Yes, guests are welcome but must be registered." }
+    ]
+  },
+  {
+    "title": "Design Futures: Panel with Emerging Innovators",
+    "picture": "/event_pictures/event.png",
+    "date": "2025-07-10",
+    "introduction": "Join a panel of emerging design leaders as they explore trends, challenges, and opportunities shaping the future of creative industries.",
+    "location": "Innovation Hub, Brooklyn",
+    "description": "The Design Futures panel features three rising stars in graphic, industrial, and digital design. Attendees will gain insight into cutting-edge tools, approaches, and career strategies.",
+    "agenda": [
+      { "time": "3:00 PM - 3:30 PM", "title": "Registration & Networking", "description": "Connect with fellow creatives.", "location": "Lobby" },
+      { "time": "3:30 PM - 4:30 PM", "title": "Panel Discussion", "description": "Emerging designers discuss the future of creative industries.", "location": "Auditorium" },
+      { "time": "4:30 PM - 5:00 PM", "title": "Audience Q&A", "description": "Panelists answer audience questions.", "location": "Auditorium" },
+      { "time": "5:00 PM - 5:30 PM", "title": "Closing Remarks & Networking", "description": "Wrap-up and networking session.", "location": "Lobby" }
+    ],
+    "speakers": [
+      { "name": "Jasmine Li", "title": "UX Designer", "picture": "/speaker_pictures/JasmineLi.png" },
+      { "name": "Daniel Ortiz", "title": "Industrial Designer", "picture": "/speaker_pictures/DanielOrtiz.png" },
+      { "name": "Priya Patel", "title": "Graphic Designer", "picture": "/speaker_pictures/PriyaPatel.png" }
+    ],
+    "faq": [
+      { "question": "Is prior registration required?", "answer": "Yes, please register online to reserve your spot." },
+      { "question": "Are refreshments provided?", "answer": "Light refreshments will be available." }
+    ]
+  }
+]
