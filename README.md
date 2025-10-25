@@ -37,17 +37,31 @@ docker-compose-prod.yml
 
 ```env
 NEXT_PUBLIC_API_URL=
-NEXT_PRIVATE_API_URL=
+NEXT_PUBLIC_IMAGE_URL=
 ```
 
 - **Development:**  
-  - `NEXT_PUBLIC_API_URL` and `NEXT_PRIVATE_API_URL` are different to handle client-side vs server-side requests.  
+  - `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_IMAGE_URL` are different to handle client-side vs server-side requests.  
   - Example values: `localhost:3000`, `docker.internal:5000` or container hostname `backend`.
 
 - **Production:**  
   - Both URLs should point to your deployed domain.
 
 ---
+
+## Backend Environment Variables
+
+The backend server also uses a `.env` file to configure runtime settings. Create a file at `./BluePrint-Backend/.env` with the following:
+
+```env
+PORT=5050
+```
+
+- `PORT` – The port on which the Express.js server will run.
+  - In development with Docker, this should match the port mapping in `docker-compose-dev.yml` (`5050:5050`).
+  - In production, adjust if your hosting environment requires a different port.
+
+> **Note:** Do **not** commit your real `.env` file with secrets. Only example or placeholder files (e.g., `.env.example`) should be version controlled.
 
 ## Running the Project
 

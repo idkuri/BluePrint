@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import FadeInSection from '@/hooks/FadeInSection';
 
-const PRIVATE_API_URL = process.env.PRIVATE_API_URL || 'http://backend:5050';
+const IMAGE_URL = process.env.NEXT_PUBLIC_IMAGE_URL || 'http://backend:5050';
 
 const Speaker = ({ speakers = [] }) => {
     return (
@@ -22,7 +22,7 @@ const Speaker = ({ speakers = [] }) => {
                                 >
                                     <div className="relative">
                                         <Image
-                                            src={`${PRIVATE_API_URL}${speaker.picture}`}
+                                            src={`${IMAGE_URL}${speaker.picture}`}
                                             alt={speaker.name}
                                             width={270}
                                             height={270}

@@ -9,7 +9,7 @@ function generateSlug(title) {
     .replace(/^-|-$/g, '');
 }
 
-const PRIVATE_API_URL = process.env.PRIVATE_API_URL || 'http://backend:5050'
+const IMAGE_API_URL = process.env.NEXT_PUBLIC_IMAGE_URL || 'http://backend:5050'
 
 export default async function EventPage({ params }) {
   // Await params in Next.js 15
@@ -21,7 +21,7 @@ export default async function EventPage({ params }) {
   console.log('Slug length:', slug?.length);
   
   try {
-    const response = await axios.get(`${PRIVATE_API_URL}/events`);
+    const response = await axios.get(`${IMAGE_API_URL}/events`);
     const events = response.data;
     
     console.log('Events fetched:', events.length);

@@ -7,7 +7,7 @@ import axios from 'axios';
 
 // Use environment variable with fallback
 const PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5050';
-const PRIVATE_API_URL = process.env.NEXT_PRIVATE_API_URL || 'http://backend:5050'
+const IMAGE_API_URL = process.env.NEXT_PUBLIC_IMAGE_URL || 'http://backend:5050'
 
 export default function Home() {
   const [events, setEvents] = useState([]);
@@ -77,7 +77,7 @@ export default function Home() {
               {/* Event Image */}
               <div className="aspect-video relative overflow-hidden shrink-0">
                   <Image
-                    src={`${PRIVATE_API_URL}${event.picture}`}
+                    src={`${IMAGE_API_URL}${event.picture}`}
                     alt={event.title}
                     fill
                     className="object-cover"
@@ -130,7 +130,7 @@ export default function Home() {
                     {event.speakers?.slice(0, 3).map((speaker, idx) =>
                         <Image
                           key={idx}
-                          src={`${PRIVATE_API_URL}${speaker.picture}`}
+                          src={`${IMAGE_API_URL}${speaker.picture}`}
                           width={32}
                           height={32}
                           className="w-8 h-8 rounded-full border-2 border-white object-cover ring-2 ring-white"
