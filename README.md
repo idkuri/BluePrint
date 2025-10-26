@@ -1,6 +1,7 @@
 # Gradient Group Technical Assignment
 
 This project is a single-page application built with **React**, **Next.js**, and an **Express.js** backend server. The goal is to create a dynamic event page based on the provided Figma design, with content managed through API endpoints.
+
 Deployed Version: https://gradient.idkuri.com
 ---
 
