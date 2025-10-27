@@ -118,14 +118,28 @@ Example snippet from `events.json`:
   "location": "Soho House, New York",
   "description": "Presented as part of The Gradient's Blueprint Series...",
   "agenda": [
-    { "time": "10:30 AM - 11:00 AM", "title": "WELCOME AND OPENING", "description": "...", "location": "Ground Floor" }
+    {
+      "time": "10:30 AM - 11:00 AM",
+      "title": "WELCOME AND OPENING",
+      "description": "...",
+      "location": "Ground Floor"
+    }
+  ],
   "speakers": [
-    { "name": "Rich Tu", "title": "Artist", "picture": "/speaker_pictures/RichTu.png" }
+    {
+      "name": "Rich Tu",
+      "title": "Artist",
+      "picture": "/speaker_pictures/RichTu.png"
+    }
   ],
   "faq": [
-    { "question": "What is the schedule for the event?", "answer": "..." }
+    {
+      "question": "What is the schedule for the event?",
+      "answer": "..."
+    }
   ]
 }
+
 ```
 
 ---
